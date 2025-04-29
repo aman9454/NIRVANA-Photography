@@ -25,4 +25,4 @@ Feel free to open issues or submit pull requests if you have suggestions or impr
 
 📬 Contact
 
-For any queries or collaborations, reach out to me via aman.singh2003041@gmail.com AND mishraanupam127@gmail.com .
+For any queries or collaborations, reach out to me via aman.singh2003041@gmail.com .
