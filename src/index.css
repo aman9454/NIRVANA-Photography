@@ -1,0 +1,80 @@
+@import '@fontsource/playfair-display/400.css';
+@import '@fontsource/playfair-display/700.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-true-black text-white font-inter;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative text-white text-lg font-inter transition-all duration-300 ease-custom hover:text-ogilvy-red;
+  }
+
+  .nav-link::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-ogilvy-red transition-all duration-300 ease-custom;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .hero-underline {
+    @apply relative inline-block;
+  }
+
+  .hero-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-1 bg-ogilvy-red transition-all duration-500 ease-custom;
+    animation: underlineExpand 1s ease-custom forwards;
+  }
+
+  @keyframes underlineExpand {
+    to {
+      width: 100%;
+    }
+  }
+
+  .masonry-grid {
+    display: flex;
+    width: auto;
+    margin-left: -16px;
+  }
+
+  .masonry-grid-column {
+    padding-left: 16px;
+    background-clip: padding-box;
+  }
+
+  .aspect-w-4 {
+    position: relative;
+    padding-bottom: calc(var(--tw-aspect-h) / var(--tw-aspect-w) * 100%);
+  }
+
+  .aspect-h-5 {
+    --tw-aspect-h: 5;
+  }
+
+  .aspect-w-4 > * {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
